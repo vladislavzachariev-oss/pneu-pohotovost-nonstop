@@ -1,312 +1,294 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pneu Pohotovost Nonstop — Pneuservis Jablonec nad Nisou</title>
-<meta name="description" content="Pneu Pohotovost Nonstop — pneuservis v Jablonci nad Nisou. Hodnocení 4,9 z 128 recenzí na Googlu. Volejte 725 505 656.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pneuservis Jablonec nad Nisou, otevřeno nonstop | PNEU POHOTOVOST NONSTOP</title>
+<meta name="description" content="Pneuservis v ulici Na Hutích 44 v Jablonci nad Nisou. Otevřeno 24 hodin denně, každý den. Oprava defektu, výměna a přezutí pneumatik. Telefon 725 505 656.">
+<meta name="theme-color" content="#f1eee6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#15140f" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:,">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --dark:#12151a;
-    --dark2:#1c2028;
-    --accent:#ff6a1a;
-    --text:#1c2028;
-    --muted:#5a6270;
-    --light:#f5f6f8;
-  }
-  *{box-sizing:border-box;margin:0;padding:0;}
-  html{scroll-behavior:smooth;}
-  body{
-    font-family:'Inter',sans-serif;
-    color:var(--text);
-    background:#fff;
-    line-height:1.5;
-    -webkit-font-smoothing:antialiased;
-  }
-  h1,h2,h3{font-family:'Oswald',sans-serif;letter-spacing:.02em;}
-  a{color:inherit;text-decoration:none;}
-  .wrap{max-width:960px;margin:0 auto;padding:0 20px;}
+:root{
+  color-scheme:light dark;
+  --paper:#f1eee6;
+  --ink:#1a1916;
+  --muted:#5c584e;
+  --rule:#c9c2b2;
+  --signal:#ffcb05;
+  --on-signal:#1a1916;
+  --pad:clamp(1.25rem,5vw,3rem);
+  --display:'Barlow Condensed','Arial Narrow',sans-serif;
+  --text:'Barlow',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--paper:#15140f;--ink:#ece7da;--muted:#a8a293;--rule:#3a372e}
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.55 var(--text);overflow-wrap:break-word;padding-bottom:4.75rem}
+h1,h2,p,ol,dl,figure,blockquote{margin:0}
+h1,h2{font-family:var(--display);font-weight:700;line-height:1}
+a{color:inherit;text-decoration-thickness:1px;text-underline-offset:.18em}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+abbr[title]{text-decoration:none}
+.frame{max-width:72rem;margin-inline:auto;padding-inline:var(--pad)}
 
-  header.hero{
-    background:linear-gradient(160deg,var(--dark) 0%,var(--dark2) 100%);
-    color:#fff;
-    padding:56px 0 48px;
-    text-align:center;
-  }
-  .badge{
-    display:inline-block;
-    background:var(--accent);
-    color:#fff;
-    font-weight:700;
-    font-size:.8rem;
-    letter-spacing:.08em;
-    text-transform:uppercase;
-    padding:6px 14px;
-    border-radius:999px;
-    margin-bottom:18px;
-  }
-  header.hero h1{
-    font-size:clamp(1.9rem,6vw,3rem);
-    font-weight:700;
-    line-height:1.15;
-    margin-bottom:10px;
-  }
-  header.hero p.sub{
-    font-size:clamp(1rem,3vw,1.25rem);
-    color:#c7ccd6;
-    margin-bottom:22px;
-  }
-  .rating{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    background:rgba(255,255,255,.08);
-    border:1px solid rgba(255,255,255,.15);
-    padding:10px 18px;
-    border-radius:12px;
-    font-weight:600;
-    font-size:1.05rem;
-    margin-bottom:26px;
-  }
-  .rating .stars{color:#ffc94a;letter-spacing:2px;}
-  .cta{
-    display:inline-block;
-    background:var(--accent);
-    color:#fff;
-    font-weight:700;
-    font-size:1.1rem;
-    padding:16px 32px;
-    border-radius:10px;
-    box-shadow:0 8px 20px rgba(255,106,26,.35);
-  }
-  .cta:active{transform:translateY(1px);}
+/* hlavička jako firemní hlavičkový papír */
+.top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:.2rem 1.5rem;padding-top:1rem;padding-bottom:.85rem;border-bottom:1px solid var(--ink)}
+.brand{font:700 1.125rem/1.1 var(--display);letter-spacing:.05em}
+.top-addr{font-size:.9375rem;color:var(--muted)}
 
-  section{padding:48px 0;}
-  section.alt{background:var(--light);}
-  h2{
-    font-size:clamp(1.4rem,4vw,1.9rem);
-    margin-bottom:26px;
-    text-align:center;
-    color:var(--dark);
-  }
+/* úvod */
+.hero{display:grid;grid-template-columns:minmax(0,1fr);gap:1.25rem;padding-top:2rem;padding-bottom:2.75rem}
+.hero h1{font-size:clamp(3.4rem,17vw,8.5rem);line-height:.88;letter-spacing:-.01em}
+.hero h1 .sub{display:block;margin-top:.7rem;font:600 clamp(1.25rem,5vw,1.75rem)/1.15 var(--display);letter-spacing:.01em}
+.lead{font-size:1.1875rem;line-height:1.45;max-width:30rem}
+.phone{display:block;min-width:0;background:var(--signal);color:var(--on-signal);text-decoration:none;padding:.8rem 1rem .9rem;border-radius:3px}
+.phone-label{display:block;font:600 1rem/1.2 var(--text)}
+.phone-num{display:block;font:700 clamp(3.1rem,15.5vw,6.25rem)/.95 var(--display);white-space:nowrap;margin-top:.15rem}
+.phone:hover .phone-num{text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:.08em}
+.phone:focus-visible{outline-color:var(--ink)}
+.more{display:grid;gap:.6rem;font-size:1rem;max-width:30rem}
+.more p{color:var(--muted)}
+.more a{color:var(--ink);font-weight:600}
 
-  .services{
-    display:grid;
-    grid-template-columns:1fr;
-    gap:16px;
-  }
-  @media(min-width:640px){
-    .services{grid-template-columns:1fr 1fr;}
-  }
-  .service-card{
-    background:#fff;
-    border:1px solid #e6e8ec;
-    border-radius:12px;
-    padding:20px;
-  }
-  section.alt .service-card{background:#fff;}
-  .service-card h3{
-    font-size:1.05rem;
-    margin-bottom:6px;
-    color:var(--dark);
-  }
-  .service-card p{color:var(--muted);font-size:.95rem;}
+/* otevírací doba: sedm stejných políček */
+.hours{border-top:4px solid var(--ink);padding-top:.7rem;margin-top:.75rem}
+.hours h2{font:600 1rem/1.2 var(--text);margin-bottom:.35rem}
+.week{width:100%;table-layout:fixed;border-collapse:collapse}
+.week th,.week td{text-align:left;padding:0 .2rem 0 .45rem;border-left:1px solid var(--rule)}
+.week th:first-child,.week td:first-child{padding-left:0;border-left:0}
+.week th{font:500 .9375rem/1 var(--text);color:var(--muted);padding-top:.3rem;padding-bottom:.35rem}
+.week td{font:700 clamp(1.05rem,4.8vw,3rem)/1 var(--display);white-space:nowrap;padding-bottom:.55rem}
+.hours .note{margin-top:.9rem;font-size:1rem;color:var(--muted)}
 
-  .hours{
-    max-width:420px;
-    margin:0 auto;
-    background:#fff;
-    border:1px solid #e6e8ec;
-    border-radius:12px;
-    overflow:hidden;
-  }
-  .hours-row{
-    display:flex;
-    justify-content:space-between;
-    padding:14px 20px;
-    font-weight:600;
-  }
-  .hours-row.emph{
-    background:var(--dark);
-    color:#fff;
-  }
-  .hours-note{
-    text-align:center;
-    color:var(--muted);
-    font-size:.9rem;
-    margin-top:14px;
-  }
+/* sekce: štítek vlevo, obsah vpravo */
+.band{border-top:1px solid var(--ink);padding-top:2.25rem;padding-bottom:2.75rem}
+.split{display:grid;grid-template-columns:minmax(0,1fr);gap:1.25rem 3rem}
+.split > *{min-width:0}
+.split h2{font-size:clamp(1.9rem,7vw,2.75rem);line-height:1;max-width:13ch}
+.aside p{margin-top:.9rem;max-width:22rem}
 
-  .contact-grid{
-    display:grid;
-    gap:16px;
-    grid-template-columns:1fr;
-    max-width:520px;
-    margin:0 auto;
-  }
-  .contact-item{
-    display:flex;
-    align-items:center;
-    gap:14px;
-    background:#fff;
-    border:1px solid #e6e8ec;
-    border-radius:12px;
-    padding:18px 20px;
-  }
-  .contact-item .icon{
-    flex:0 0 auto;
-    width:42px;height:42px;
-    border-radius:10px;
-    background:var(--accent);
-    color:#fff;
-    display:flex;align-items:center;justify-content:center;
-    font-size:1.2rem;
-  }
-  .contact-item .label{font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;}
-  .contact-item .value{font-weight:700;font-size:1.05rem;color:var(--dark);}
-  .contact-item a.value{color:var(--dark);}
-  .contact-item a.value:hover{color:var(--accent);}
+/* co mít připravené */
+.prep{list-style:none;padding:0;counter-reset:krok;display:grid;grid-template-columns:minmax(0,1fr);column-gap:2.5rem}
+.prep li{counter-increment:krok;display:grid;grid-template-columns:1.6rem minmax(0,1fr);gap:.75rem;padding-top:.9rem;padding-bottom:1rem;border-top:1px solid var(--rule)}
+.prep li::before{content:counter(krok);font:700 1.6rem/1 var(--display)}
+.prep strong{font-weight:600}
+.sidewall{font:600 1.0625rem/1 var(--display);letter-spacing:.09em;background:var(--ink);color:var(--paper);padding:.18em .45em .12em;border-radius:2px;white-space:nowrap}
 
-  .map-link{
-    display:block;
-    text-align:center;
-    margin-top:22px;
-    font-weight:700;
-    color:var(--accent);
-    text-decoration:underline;
-  }
+/* recenze */
+.rating strong{font-weight:600}
+.q{padding-top:1.4rem;padding-bottom:1.5rem;border-top:1px solid var(--rule)}
+.q:first-child{border-top:0;padding-top:0}
+.q .when{font:700 1.25rem/1 var(--display);margin-bottom:.55rem}
+.q blockquote{font-size:1.125rem;line-height:1.5;max-width:38rem}
+.q.lead-q blockquote{font:500 clamp(1.35rem,5vw,1.95rem)/1.32 var(--text);max-width:42rem}
+.q figcaption{margin-top:.65rem;font-weight:600}
 
-  footer{
-    background:var(--dark);
-    color:#8b909c;
-    text-align:center;
-    padding:26px 20px;
-    font-size:.85rem;
-  }
-  footer .credit{margin-top:6px;color:#5a6270;}
+/* adresa */
+.addr{font:700 clamp(2rem,8.5vw,3.5rem)/1.02 var(--display)}
+.go{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.25rem;margin-bottom:1.75rem}
+.go a{display:inline-flex;align-items:center;min-height:2.875rem;padding:0 1.1rem;border:2px solid var(--ink);border-radius:3px;text-decoration:none;font-weight:600}
+.go a:first-child{background:var(--ink);color:var(--paper)}
+.facts{display:grid;grid-template-columns:minmax(0,6.5rem) minmax(0,1fr);gap:.55rem 1rem;max-width:34rem}
+.facts dt{color:var(--muted)}
+.facts dd{margin:0}
+
+.foot{border-top:1px solid var(--ink);padding-top:1.1rem;padding-bottom:1.6rem;display:flex;flex-wrap:wrap;justify-content:space-between;gap:.4rem 2rem;font-size:.875rem;color:var(--muted)}
+
+/* lišta s telefonem jen na mobilu */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:5;display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.65rem var(--pad) calc(.7rem + env(safe-area-inset-bottom));background:var(--signal);color:var(--on-signal);text-decoration:none;font:700 1.625rem/1 var(--display);border-top:1px solid rgba(0,0,0,.35);transition:transform .2s ease,visibility 0s linear 0s}
+.callbar span{font:600 1rem/1 var(--text)}
+.callbar.is-away{transform:translateY(100%);visibility:hidden;transition:transform .2s ease,visibility 0s linear .2s}
+
+@media (min-width:40rem){
+  .prep{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (min-width:56rem){
+  body{padding-bottom:0}
+  .callbar{display:none}
+  .hero{grid-template-columns:minmax(0,7fr) minmax(0,5fr);grid-template-areas:"h1 h1" "phone lead" "phone more" "hours hours";column-gap:3.5rem;row-gap:1.25rem;padding-top:3rem;padding-bottom:3.5rem}
+  .hero h1{grid-area:h1;margin-bottom:1rem}
+  .lead{grid-area:lead;align-self:start;padding-top:.4rem}
+  .phone{grid-area:phone;align-self:start;padding:1.1rem 1.4rem 1.2rem}
+  .more{grid-area:more;align-self:start}
+  .hours{grid-area:hours;margin-top:1.5rem}
+  .week th{font-size:1rem}
+  .split{grid-template-columns:minmax(0,4fr) minmax(0,8fr)}
+  .band{padding-top:3rem;padding-bottom:3.5rem}
+}
+@media (prefers-reduced-motion:reduce){
+  .callbar,.callbar.is-away{transition:none}
+}
 </style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Pneu Pohotovost Nonstop",
-  "description": "Pneuservis v Jablonci nad Nisou.",
-  "telephone": "+420725505656",
+  "@type": "AutoRepair",
+  "name": "PNEU POHOTOVOST NONSTOP",
+  "description": "Pneuservis v Jablonci nad Nisou, otevřeno 24 hodin denně, 7 dní v týdnu.",
+  "telephone": "+420 725 505 656",
   "email": "pneupohotovost@email.cz",
+  "identifier": {"@type": "PropertyValue", "propertyID": "IČO", "value": "87532611"},
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Na Hutích 2962/44",
+    "streetAddress": "Na Hutích 44",
     "postalCode": "466 01",
     "addressLocality": "Jablonec nad Nisou",
     "addressCountry": "CZ"
   },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "128"
-  },
-  "openingHours": "Mo-Su 00:00-23:59"
+  "geo": {"@type": "GeoCoordinates", "latitude": 50.716336, "longitude": 15.186582},
+  "hasMap": "https://www.google.com/maps/place/PNEU+POHOTOVOST+NONSTOP/data=!4m7!3m6!1s0x470ecbb35365db2d:0x1cb0a79a1d8aa314!8m2!3d50.7163362!4d15.1865824!16s%2Fg%2F11j7dqpskw!19sChIJLdtlU7PLDkcRFKOKHZqnsBw",
+  "openingHours": "Mo-Su 00:00-23:59",
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  }],
+  "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.9", "bestRating": "5", "worstRating": "1", "ratingCount": "128"},
+  "amenityFeature": [
+    {"@type": "LocationFeatureSpecification", "name": "Bezbariérový vstup", "value": true},
+    {"@type": "LocationFeatureSpecification", "name": "Bezbariérové parkování", "value": true}
+  ]
 }
 </script>
 </head>
 <body>
 
-<header class="hero">
-  <div class="wrap">
-    <span class="badge">Pneuservis · Jablonec nad Nisou</span>
-    <h1>PNEU POHOTOVOST NONSTOP</h1>
-    <p class="sub">Nonstop pneuservis přímo v Jablonci nad Nisou</p>
-    <div class="rating">
-      <span class="stars">★★★★★</span>
-      <span>4,9 z 128 recenzí na Googlu</span>
-    </div>
-    <br>
-    <a class="cta" href="tel:+420725505656">📞 Zavolat 725 505 656</a>
-  </div>
+<header class="top frame">
+  <span class="brand">PNEU POHOTOVOST NONSTOP</span>
+  <span class="top-addr">Na Hutích 44, Jablonec nad Nisou</span>
 </header>
 
-<section id="sluzby">
-  <div class="wrap">
-    <h2>Naše služby</h2>
-    <div class="services">
-      <div class="service-card">
-        <h3>Přezutí a vyvážení kol</h3>
-        <p>Sezónní výměna pneumatik včetně vyvážení kol.</p>
-      </div>
-      <div class="service-card">
-        <h3>Oprava defektů</h3>
-        <p>Oprava píchlých a poškozených pneumatik.</p>
-      </div>
-      <div class="service-card">
-        <h3>Prodej a montáž pneumatik</h3>
-        <p>Nové i použité pneumatiky, montáž na počkání.</p>
-      </div>
-      <div class="service-card">
-        <h3>Uskladnění pneumatik</h3>
-        <p>Sezónní úschova sady kol mimo sezónu.</p>
-      </div>
-      <div class="service-card">
-        <h3>Kontrola podvozku a geometrie</h3>
-        <p>Základní kontrola stavu podvozku a seřízení geometrie.</p>
-      </div>
-      <div class="service-card">
-        <h3>Nonstop pohotovost</h3>
-        <p>Pomoc při defektu na cestách kdykoliv ve dne v noci.</p>
-      </div>
-    </div>
-  </div>
-</section>
+<main>
 
-<section class="alt" id="oteviraci-doba">
-  <div class="wrap">
+<section class="hero frame" aria-labelledby="titulek">
+  <h1 id="titulek">Otevřeno nonstop.<span class="sub">Pneuservis v&nbsp;Jablonci nad Nisou</span></h1>
+
+  <p class="lead">Oprava defektu, výměna a&nbsp;přezutí pneumatik. Zavolat můžete ve dne i&nbsp;v&nbsp;noci, v&nbsp;sobotu i&nbsp;v&nbsp;neděli.</p>
+
+  <a class="phone" href="tel:+420725505656">
+    <span class="phone-label">Telefon, 0–24</span>
+    <span class="phone-num">725 505 656</span>
+  </a>
+
+  <div class="more">
+    <p>E-mail: <a href="mailto:pneupohotovost@email.cz">pneupohotovost@email.cz</a>. S&nbsp;defektem na cestě ale radši volejte, je to rychlejší.</p>
+    <p><a href="#recenze">124 ze 128 hodnocení na Googlu je pět hvězd.</a></p>
+  </div>
+
+  <div class="hours">
     <h2>Otevírací doba</h2>
-    <div class="hours">
-      <div class="hours-row emph">
-        <span>Pondělí – Neděle</span>
-        <span>NONSTOP</span>
-      </div>
-    </div>
-    <p class="hours-note">Pohotovostní služba k dispozici 24 hodin denně, 7 dní v týdnu.</p>
+    <table class="week">
+      <thead>
+        <tr>
+          <th scope="col"><abbr title="pondělí">Po</abbr></th>
+          <th scope="col"><abbr title="úterý">Út</abbr></th>
+          <th scope="col"><abbr title="středa">St</abbr></th>
+          <th scope="col"><abbr title="čtvrtek">Čt</abbr></th>
+          <th scope="col"><abbr title="pátek">Pá</abbr></th>
+          <th scope="col"><abbr title="sobota">So</abbr></th>
+          <th scope="col"><abbr title="neděle">Ne</abbr></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>0–24</td><td>0–24</td><td>0–24</td><td>0–24</td><td>0–24</td><td>0–24</td><td>0–24</td></tr>
+      </tbody>
+    </table>
+    <p class="note">Než vyrazíte, zavolejte. Domluvíme se, kdy přijet.</p>
   </div>
 </section>
 
-<section id="kontakt">
-  <div class="wrap">
-    <h2>Kontakt</h2>
-    <div class="contact-grid">
-      <div class="contact-item">
-        <div class="icon">📞</div>
-        <div>
-          <div class="label">Telefon</div>
-          <a class="value" href="tel:+420725505656">725 505 656</a>
-        </div>
-      </div>
-      <div class="contact-item">
-        <div class="icon">✉️</div>
-        <div>
-          <div class="label">E-mail</div>
-          <a class="value" href="mailto:pneupohotovost@email.cz">pneupohotovost@email.cz</a>
-        </div>
-      </div>
-      <div class="contact-item">
-        <div class="icon">📍</div>
-        <div>
-          <div class="label">Adresa</div>
-          <div class="value">Na Hutích 2962/44, 466 01 Jablonec nad Nisou</div>
-        </div>
-      </div>
-    </div>
-    <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Na+Hut%C3%ADch+2962%2F44%2C+466+01+Jablonec+nad+Nisou" target="_blank" rel="noopener">Zobrazit na Google Maps →</a>
+<section class="band frame" aria-labelledby="pripravit">
+  <div class="split">
+    <h2 id="pripravit">Co mít připravené, až zavoláte</h2>
+    <ol class="prep">
+      <li><p><strong>Kde jste.</strong> Ulice, obec nebo úsek silnice. A&nbsp;jestli se s&nbsp;autem dá ještě popojet.</p></li>
+      <li><p><strong>Jaké máte auto.</strong> Stačí značka a&nbsp;model.</p></li>
+      <li><p><strong>Rozměr pneumatiky.</strong> Je vyražený na boku pneumatiky, vypadá třeba takhle: <span class="sidewall">205/55 R16</span>. Ve tmě si na něj posviťte telefonem a&nbsp;vyfoťte ho.</p></li>
+      <li><p><strong>Jestli máte rezervu.</strong> Plnohodnotnou, jen úzké kolo na dojetí, nebo žádnou.</p></li>
+    </ol>
   </div>
 </section>
 
-<footer>
-  <div>Pneu Pohotovost Nonstop — Na Hutích 2962/44, 466 01 Jablonec nad Nisou</div>
-  <div class="credit">Ukázka webu — Vladislav Zachariev</div>
+<section class="band frame" id="recenze" aria-labelledby="recenze-h">
+  <div class="split">
+    <div class="aside">
+      <h2 id="recenze-h">Z&nbsp;recenzí na Googlu</h2>
+      <p class="rating"><strong>124 ze 128</strong> hodnocení je pět hvězd, průměr 4,9. Zbylá čtyři: dvakrát čtyři hvězdy, jednou dvě a&nbsp;jednou jedna.</p>
+      <p><a href="https://www.google.com/maps/place/PNEU+POHOTOVOST+NONSTOP/data=!4m7!3m6!1s0x470ecbb35365db2d:0x1cb0a79a1d8aa314!8m2!3d50.7163362!4d15.1865824!16s%2Fg%2F11j7dqpskw!19sChIJLdtlU7PLDkcRFKOKHZqnsBw" target="_blank" rel="noopener">Všechny recenze v&nbsp;Mapách Google</a></p>
+    </div>
+    <div class="quotes">
+      <figure class="q lead-q">
+        <p class="when">Večer</p>
+        <blockquote>Po oslovení řady firem v okolí jako jediný jednal pan majitel firmy rychle a vstřícně. Dokonce mi vyměnil gumy ve večerních hodinách, abych nemusel jezdit na „kolečku na dojetí“.</blockquote>
+        <figcaption>Ivo K.</figcaption>
+      </figure>
+      <figure class="q">
+        <p class="when">Neděle</p>
+        <blockquote>Moc děkuji za ochotu přijet v neděli a vyměnit mi rezervu (a rovnou přezout). Pán je velice milý a ochotný. Doporučuji</blockquote>
+        <figcaption>Kateřina J.</figcaption>
+      </figure>
+      <figure class="q">
+        <p class="when">Sobota ráno</p>
+        <blockquote>Vstřicny a lidský přistup v sobotu ráno. Po zjištěni že je kolo k.O. a ja byl bez rezervy mi dokonce našli jinou jetou gumu s podobným vzorem a po 30 min. jsem frčel. Cena na pohotovost přijatelna. Určitě doporučuji a kontakt si ukladam.</blockquote>
+        <figcaption>Jan T.</figcaption>
+      </figure>
+      <figure class="q">
+        <p class="when">Sobota</p>
+        <blockquote>Super servis, ochota a vstřícnost ikdyž pán už měl plán jak prožít sobotu a na místě nebyl, byl ochotný přijet zpět a opravit pneumatiku a zachránil nám tím výlet a návrat domů, velice děkujeme</blockquote>
+        <figcaption>Roman M.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="band frame" aria-labelledby="kde">
+  <div class="split">
+    <h2 id="kde">Kde nás najdete</h2>
+    <div>
+      <p class="addr">Na Hutích 44,<br> 466&nbsp;01 Jablonec nad Nisou&nbsp;1</p>
+      <p class="go">
+        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=50.716336%2C15.186582" target="_blank" rel="noopener">Navigovat sem</a>
+        <a href="https://www.google.com/maps/place/PNEU+POHOTOVOST+NONSTOP/data=!4m7!3m6!1s0x470ecbb35365db2d:0x1cb0a79a1d8aa314!8m2!3d50.7163362!4d15.1865824!16s%2Fg%2F11j7dqpskw!19sChIJLdtlU7PLDkcRFKOKHZqnsBw" target="_blank" rel="noopener">Otevřít v&nbsp;Mapách Google</a>
+      </p>
+      <dl class="facts">
+        <dt>Telefon</dt><dd><a href="tel:+420725505656">725 505 656</a>, nonstop</dd>
+        <dt>E-mail</dt><dd><a href="mailto:pneupohotovost@email.cz">pneupohotovost@email.cz</a></dd>
+        <dt>GPS</dt><dd>50.716336, 15.186582</dd>
+        <dt>Přístup</dt><dd>Bezbariérový vstup i&nbsp;parkování</dd>
+        <dt>IČO</dt><dd>87532611</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot frame">
+  <p>PNEU POHOTOVOST NONSTOP, IČO 87532611</p>
+  <p>Ukázka webu — Vladislav Zachariev</p>
 </footer>
 
+<a class="callbar" href="tel:+420725505656"><span>Zavolat</span>725 505 656</a>
+
+<script>
+/* Spodní lišta s telefonem se schová, dokud je vidět velké číslo nahoře.
+   Bez JavaScriptu zůstane lišta prostě viditelná. */
+(function () {
+  var bar = document.querySelector('.callbar');
+  var big = document.querySelector('.phone');
+  if (!bar || !big || !('IntersectionObserver' in window)) return;
+  new IntersectionObserver(function (entries) {
+    bar.classList.toggle('is-away', entries[0].isIntersecting);
+  }).observe(big);
+})();
+</script>
 </body>
 </html>
