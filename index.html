@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pneu Pohotovost Nonstop — Pneuservis Jablonec nad Nisou</title>
+<meta name="description" content="Pneu Pohotovost Nonstop — pneuservis v Jablonci nad Nisou. Hodnocení 4,9 z 128 recenzí na Googlu. Volejte 725 505 656.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --dark:#12151a;
+    --dark2:#1c2028;
+    --accent:#ff6a1a;
+    --text:#1c2028;
+    --muted:#5a6270;
+    --light:#f5f6f8;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Inter',sans-serif;
+    color:var(--text);
+    background:#fff;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:'Oswald',sans-serif;letter-spacing:.02em;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:960px;margin:0 auto;padding:0 20px;}
+
+  header.hero{
+    background:linear-gradient(160deg,var(--dark) 0%,var(--dark2) 100%);
+    color:#fff;
+    padding:56px 0 48px;
+    text-align:center;
+  }
+  .badge{
+    display:inline-block;
+    background:var(--accent);
+    color:#fff;
+    font-weight:700;
+    font-size:.8rem;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    padding:6px 14px;
+    border-radius:999px;
+    margin-bottom:18px;
+  }
+  header.hero h1{
+    font-size:clamp(1.9rem,6vw,3rem);
+    font-weight:700;
+    line-height:1.15;
+    margin-bottom:10px;
+  }
+  header.hero p.sub{
+    font-size:clamp(1rem,3vw,1.25rem);
+    color:#c7ccd6;
+    margin-bottom:22px;
+  }
+  .rating{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.15);
+    padding:10px 18px;
+    border-radius:12px;
+    font-weight:600;
+    font-size:1.05rem;
+    margin-bottom:26px;
+  }
+  .rating .stars{color:#ffc94a;letter-spacing:2px;}
+  .cta{
+    display:inline-block;
+    background:var(--accent);
+    color:#fff;
+    font-weight:700;
+    font-size:1.1rem;
+    padding:16px 32px;
+    border-radius:10px;
+    box-shadow:0 8px 20px rgba(255,106,26,.35);
+  }
+  .cta:active{transform:translateY(1px);}
+
+  section{padding:48px 0;}
+  section.alt{background:var(--light);}
+  h2{
+    font-size:clamp(1.4rem,4vw,1.9rem);
+    margin-bottom:26px;
+    text-align:center;
+    color:var(--dark);
+  }
+
+  .services{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:16px;
+  }
+  @media(min-width:640px){
+    .services{grid-template-columns:1fr 1fr;}
+  }
+  .service-card{
+    background:#fff;
+    border:1px solid #e6e8ec;
+    border-radius:12px;
+    padding:20px;
+  }
+  section.alt .service-card{background:#fff;}
+  .service-card h3{
+    font-size:1.05rem;
+    margin-bottom:6px;
+    color:var(--dark);
+  }
+  .service-card p{color:var(--muted);font-size:.95rem;}
+
+  .hours{
+    max-width:420px;
+    margin:0 auto;
+    background:#fff;
+    border:1px solid #e6e8ec;
+    border-radius:12px;
+    overflow:hidden;
+  }
+  .hours-row{
+    display:flex;
+    justify-content:space-between;
+    padding:14px 20px;
+    font-weight:600;
+  }
+  .hours-row.emph{
+    background:var(--dark);
+    color:#fff;
+  }
+  .hours-note{
+    text-align:center;
+    color:var(--muted);
+    font-size:.9rem;
+    margin-top:14px;
+  }
+
+  .contact-grid{
+    display:grid;
+    gap:16px;
+    grid-template-columns:1fr;
+    max-width:520px;
+    margin:0 auto;
+  }
+  .contact-item{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    background:#fff;
+    border:1px solid #e6e8ec;
+    border-radius:12px;
+    padding:18px 20px;
+  }
+  .contact-item .icon{
+    flex:0 0 auto;
+    width:42px;height:42px;
+    border-radius:10px;
+    background:var(--accent);
+    color:#fff;
+    display:flex;align-items:center;justify-content:center;
+    font-size:1.2rem;
+  }
+  .contact-item .label{font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;}
+  .contact-item .value{font-weight:700;font-size:1.05rem;color:var(--dark);}
+  .contact-item a.value{color:var(--dark);}
+  .contact-item a.value:hover{color:var(--accent);}
+
+  .map-link{
+    display:block;
+    text-align:center;
+    margin-top:22px;
+    font-weight:700;
+    color:var(--accent);
+    text-decoration:underline;
+  }
+
+  footer{
+    background:var(--dark);
+    color:#8b909c;
+    text-align:center;
+    padding:26px 20px;
+    font-size:.85rem;
+  }
+  footer .credit{margin-top:6px;color:#5a6270;}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Pneu Pohotovost Nonstop",
+  "description": "Pneuservis v Jablonci nad Nisou.",
+  "telephone": "+420725505656",
+  "email": "pneupohotovost@email.cz",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Na Hutích 2962/44",
+    "postalCode": "466 01",
+    "addressLocality": "Jablonec nad Nisou",
+    "addressCountry": "CZ"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "128"
+  },
+  "openingHours": "Mo-Su 00:00-23:59"
+}
+</script>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="badge">Pneuservis · Jablonec nad Nisou</span>
+    <h1>PNEU POHOTOVOST NONSTOP</h1>
+    <p class="sub">Nonstop pneuservis přímo v Jablonci nad Nisou</p>
+    <div class="rating">
+      <span class="stars">★★★★★</span>
+      <span>4,9 z 128 recenzí na Googlu</span>
+    </div>
+    <br>
+    <a class="cta" href="tel:+420725505656">📞 Zavolat 725 505 656</a>
+  </div>
+</header>
+
+<section id="sluzby">
+  <div class="wrap">
+    <h2>Naše služby</h2>
+    <div class="services">
+      <div class="service-card">
+        <h3>Přezutí a vyvážení kol</h3>
+        <p>Sezónní výměna pneumatik včetně vyvážení kol.</p>
+      </div>
+      <div class="service-card">
+        <h3>Oprava defektů</h3>
+        <p>Oprava píchlých a poškozených pneumatik.</p>
+      </div>
+      <div class="service-card">
+        <h3>Prodej a montáž pneumatik</h3>
+        <p>Nové i použité pneumatiky, montáž na počkání.</p>
+      </div>
+      <div class="service-card">
+        <h3>Uskladnění pneumatik</h3>
+        <p>Sezónní úschova sady kol mimo sezónu.</p>
+      </div>
+      <div class="service-card">
+        <h3>Kontrola podvozku a geometrie</h3>
+        <p>Základní kontrola stavu podvozku a seřízení geometrie.</p>
+      </div>
+      <div class="service-card">
+        <h3>Nonstop pohotovost</h3>
+        <p>Pomoc při defektu na cestách kdykoliv ve dne v noci.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="oteviraci-doba">
+  <div class="wrap">
+    <h2>Otevírací doba</h2>
+    <div class="hours">
+      <div class="hours-row emph">
+        <span>Pondělí – Neděle</span>
+        <span>NONSTOP</span>
+      </div>
+    </div>
+    <p class="hours-note">Pohotovostní služba k dispozici 24 hodin denně, 7 dní v týdnu.</p>
+  </div>
+</section>
+
+<section id="kontakt">
+  <div class="wrap">
+    <h2>Kontakt</h2>
+    <div class="contact-grid">
+      <div class="contact-item">
+        <div class="icon">📞</div>
+        <div>
+          <div class="label">Telefon</div>
+          <a class="value" href="tel:+420725505656">725 505 656</a>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="icon">✉️</div>
+        <div>
+          <div class="label">E-mail</div>
+          <a class="value" href="mailto:pneupohotovost@email.cz">pneupohotovost@email.cz</a>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="icon">📍</div>
+        <div>
+          <div class="label">Adresa</div>
+          <div class="value">Na Hutích 2962/44, 466 01 Jablonec nad Nisou</div>
+        </div>
+      </div>
+    </div>
+    <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Na+Hut%C3%ADch+2962%2F44%2C+466+01+Jablonec+nad+Nisou" target="_blank" rel="noopener">Zobrazit na Google Maps →</a>
+  </div>
+</section>
+
+<footer>
+  <div>Pneu Pohotovost Nonstop — Na Hutích 2962/44, 466 01 Jablonec nad Nisou</div>
+  <div class="credit">Ukázka webu — Vladislav Zachariev</div>
+</footer>
+
+</body>
+</html>
